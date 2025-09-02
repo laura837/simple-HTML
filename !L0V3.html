@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Love Envelope</title>
+  <!-- Cute Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      position: relative;
+    }
+
+    .envelope {
+      width: 400px;
+      height: 200px;
+      background: #ff4d6d;
+      margin: 0 auto;
+      position: relative;
+      border-radius: 5px;
+      overflow: hidden;
+      transition: transform 0.5s ease;
+    }
+
+    .flap {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 150%;
+      height: 70px;
+      background: #ff6b81;
+      clip-path: polygon(50% 100%, 0 0, 100% 0);
+      transition: transform 0.5s ease;
+      transform-origin: top;
+    }
+
+    .letter {
+      width: 180px;
+      height: 100px;
+      background: white;
+      position: absolute;
+      left: 10px;
+      top: 100%;
+      border-radius: 10px;
+      text-align: center;
+      padding-top: 30px;
+      font-size: 22px;
+      color: #ff3366;
+      font-weight: bold;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+      transition: top 0.8s ease, box-shadow 0.5s ease;
+      font-family: 'Pacifico', cursive; /* Cute font */
+    }
+
+    .letter.glow {
+      box-shadow: 0 0 20px 5px rgba(255, 100, 150, 0.7);
+    }
+
+    .buttons {
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      border-radius: 20px;
+      background: #ff4d6d;
+      color: white;
+      font-size: 14px;
+      cursor: pointer;
+      box-shadow: 2px 4px 6px rgba(0,0,0,0.2);
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #ff1e50;
+    }
+
+    /* Floating hearts */
+    .heart {
+      position: absolute;
+      color: #ff4d6d;
+      font-size: 20px;
+      opacity: 0.7;
+      animation: floatUp 4s linear infinite;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0) scale(1); opacity: 0.8; }
+      100% { transform: translateY(-300px) scale(1.5); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="envelope" id="envelope">
+      <div class="flap" id="flap"></div>
+      <div class="letter" id="letter">I love you Manuel 💖</div>
+    </div>
+    <div class="buttons">
+      <button onclick="openEnvelope()">Open Envelope</button>
+      <button onclick="closeEnvelope()">Close Envelope</button>
+    </div>
+  </div>
+
+  <!-- Background music -->
+  <audio id="bgMusic" src="<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Love Envelope</title>
+  <!-- Cute Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      position: relative;
+    }
+
+    .envelope {
+      width: 200px;
+      height: 120px;
+      background: #ff4d6d;
+      margin: 0 auto;
+      position: relative;
+      border-radius: 5px;
+      overflow: hidden;
+      transition: transform 0.5s ease;
+    }
+
+    .flap {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background: #ff6b81;
+      clip-path: polygon(50% 100%, 0 0, 100% 0);
+      transition: transform 0.5s ease;
+      transform-origin: top;
+    }
+
+    .letter {
+      width: 180px;
+      height: 100px;
+      background: white;
+      position: absolute;
+      left: 10px;
+      top: 100%;
+      border-radius: 10px;
+      text-align: center;
+      padding-top: 30px;
+      font-size: 22px;
+      color: #ff3366;
+      font-weight: bold;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+      transition: top 0.8s ease, box-shadow 0.5s ease;
+      font-family: 'Pacifico', cursive; /* Cute font */
+    }
+
+    .letter.glow {
+      box-shadow: 0 0 20px 5px rgba(255, 100, 150, 0.7);
+    }
+
+    .buttons {
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      border-radius: 20px;
+      background: #ff4d6d;
+      color: white;
+      font-size: 14px;
+      cursor: pointer;
+      box-shadow: 2px 4px 6px rgba(0,0,0,0.2);
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #ff1e50;
+    }
+
+    /* Floating hearts */
+    .heart {
+      position: absolute;
+      color: #ff4d6d;
+      font-size: 20px;
+      opacity: 0.7;
+      animation: floatUp 4s linear infinite;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0) scale(1); opacity: 0.8; }
+      100% { transform: translateY(-300px) scale(1.5); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="envelope" id="envelope">
+      <div class="flap" id="flap"></div>
+      <div class="letter" id="letter">I love you Manuel 💖</div>
+    </div>
+    <div class="buttons">
+      <button onclick="openEnvelope()">Open Envelope</button>
+      <button onclick="closeEnvelope()">Close Envelope</button>
+    </div>
+  </div>
+
+  <!-- Background music -->
+  <audio id="bgMusic" src="your-song.mp3"></audio>
+
+  <script>
+    function openEnvelope() {
+      document.getElementById("letter").style.top = "10px";
+      document.getElementById("letter").classList.add("glow");
+      document.getElementById("flap").style.transform = "rotateX(180deg)";
+      createHearts();
+
+      // Play music
+      let music = document.getElementById("bgMusic");
+      music.play();
+    }
+
+    function closeEnvelope() {
+      document.getElementById("letter").style.top = "100%";
+      document.getElementById("letter").classList.remove("glow");
+      document.getElementById("flap").style.transform = "rotateX(0deg)";
+
+      // Pause music
+      let music = document.getElementById("bgMusic");
+      music.pause();
+      music.currentTime = 0; // Reset
+    }
+
+    function createHearts() {
+      for (let i = 0; i < 10; i++) {
+        let heart = document.createElement("div");
+        heart.innerHTML = "❤️";
+        heart.className = "heart";
+        heart.style.left = Math.random() * window.innerWidth + "px";
+        heart.style.top = window.innerHeight + "px";
+        heart.style.fontSize = (20 + Math.random() * 20) + "px";
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+          heart.remove();
+        }, 4000);
+      }
+    }
+  </script>
+</body>
+</html>
+"></audio>
+
+  <script>
+    function openEnvelope() {
+      document.getElementById("letter").style.top = "10px";
+      document.getElementById("letter").classList.add("glow");
+      document.getElementById("flap").style.transform = "rotateX(180deg)";
+      createHearts();
+
+      // Play music
+      let music = document.getElementById("bgMusic");
+      music.play();
+    }
+
+    function closeEnvelope() {
+      document.getElementById("letter").style.top = "100%";
+      document.getElementById("letter").classList.remove("glow");
+      document.getElementById("flap").style.transform = "rotateX(0deg)";
+
+      // Pause music
+      let music = document.getElementById("bgMusic");
+      music.pause();
+      music.currentTime = 0; // Reset
+    }
+
+    function createHearts() {
+      for (let i = 0; i < 10; i++) {
+        let heart = document.createElement("div");
+        heart.innerHTML = "❤️";
+        heart.className = "heart";
+        heart.style.left = Math.random() * window.innerWidth + "px";
+        heart.style.top = window.innerHeight + "px";
+        heart.style.fontSize = (20 + Math.random() * 20) + "px";
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+          heart.remove();
+        }, 4000);
+      }
+    }
+  </script>
+</body>
+</html>
